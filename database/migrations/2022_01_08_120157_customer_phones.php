@@ -28,6 +28,6 @@ class CustomerPhones extends Migration
      */
     public function down()
     {
-        DB::statement("DROP VIEW companiesView");
+        DB::statement("DROP VIEW customer_phones");
     }
 }
