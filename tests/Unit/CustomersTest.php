@@ -14,10 +14,13 @@ class CustomersTest extends TestCase
      *
      * @return void
      */
-    public function testHasInvalidCountry(){
+    public function testCustomerPage(){
         //check if the page load with status 200 on normal behavior
+        $countries = Country::select('code', 'name')->get();
         $response = $this->get(route('customers.index'));
         $response->assertStatus(200);
+        $response->assertViewIs('welcome');
+        $response->assertViewHas('countries', $countries);
 
         // test filter with country
         $country  = Country::first();
