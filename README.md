@@ -1,9 +1,9 @@
 # Jumia Test
 ## Installation guide
 - Clone the repo`https://github.com/Bugzee321/jumia-test`
-- Navigate to the project `jumia-test`
+- Navigate to the project `cd jumia-test/`
 - Build Docker Image `docker-compose up --build -d`
-- Install dependencies `docker-compose exec apache composer install`
+- Install dependencies `docker-compose exec app composer install`
 - UniTest `docker-compose exec app php artisan test`
 - Open `http://localhost:8000/` on the browser and check the application
 
